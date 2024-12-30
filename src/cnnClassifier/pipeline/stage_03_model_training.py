@@ -2,11 +2,7 @@ from cnnClassifier.config.configuration import ConfigurationManager
 from cnnClassifier.components.model_training import Training
 from cnnClassifier import logger
 
-
-
 STAGE_NAME = "Training"
-
-
 
 class ModelTrainingPipeline:
     def __init__(self):
@@ -19,8 +15,6 @@ class ModelTrainingPipeline:
         training.get_base_model()
         training.train_valid_generator()
         training.train()
-
-
 
 if __name__ == '__main__':
     try:
